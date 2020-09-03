@@ -1,0 +1,27 @@
+body {
+  margin: 0 auto;
+}
+
+.App {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  /* border: solid yellow 1px; */
+}
+
+.header {
+  height: 130px;
+  background-color: purple;
+  border: solid rgb(158, 61, 158) 10px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.quiz-area {
+  background-color: rgba(187, 148, 238, .3);
+  
+}
+
