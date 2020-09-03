@@ -15,10 +15,11 @@ export default function Landing() {
     return (
         <div>
             <h1>Welcome to Triva Time</h1>
-            <form className="name-form" onSubmit="handleSubmit">
+            <form className="name-form" onSubmit={handleSubmit}>
                 <label>Enter Your Name:</label>
                 <input type='text' name='name' onChange={e => setName(e.target.value)} required></input>
-                <button className="btn" type='submit'><Link onClick={handleSubmit} to="/gameboard">Submit</Link></button>
+                <button className="btn" type='submit'>Submit</button>
+            {redirect}
             </form>
         </div>
     )
