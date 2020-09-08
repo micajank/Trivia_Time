@@ -4,7 +4,7 @@ import Question from '../components/Question';
 import Choices from '../components/Choices';
 
 export default function Gameboard(props) {
-    const [isReady, setIsReady] = useState(true)
+    const [isReady, setIsReady] = useState(false)
 
     let trivia = props.triviaList.pop()
     // let choices = trivia
