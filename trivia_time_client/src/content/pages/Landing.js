@@ -6,6 +6,7 @@ export default function Landing() {
     const [name, setName] = useState("");
     let [redirect, setRedirect] = useState("");
 
+
     const handleSubmit = e => {
         e.preventDefault();
         console.log(name);
@@ -13,7 +14,7 @@ export default function Landing() {
     }
 
     return (
-        <div>
+        <div className="login">
             <h1>Welcome to Triva Time</h1>
             <form className="name-form" onSubmit={handleSubmit}>
                 <label>Enter Your Name:</label>

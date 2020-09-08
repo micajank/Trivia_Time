@@ -6,10 +6,11 @@ import Gameboard from './pages/Gameboard';
 
 
 export default function Content(props) {
+    
     return (
         <Switch>
             <Route exact path='/' component={Landing} />
-            <Route path='/gameboard' component={Gameboard} />
+            <Route path='/gameboard' render={() => <Gameboard triviaList={props.triviaList} />} />
         </Switch>
     )
 

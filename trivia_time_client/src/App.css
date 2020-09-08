@@ -1,5 +1,6 @@
 body {
   margin: 0 auto;
+  background-color: rgba(187, 148, 238, .3);
 }
 
 .App {
@@ -13,6 +14,7 @@ body {
   height: 130px;
   background-color: purple;
   border: solid rgb(158, 61, 158) 10px;
+  
 }
 
 .header h1 {
@@ -20,8 +22,38 @@ body {
   font-size: 50px;
 }
 
-.quiz-area {
-  background-color: rgba(187, 148, 238, .3);
-  
+.login {
+  width: 340px;
+  margin-left: calc(50% - 170px);
+  /* border: solid purple 1px; */
+  padding: 20px 0 100% 0;
 }
 
+.quiz-area {
+  background-color: rgba(187, 148, 238, .3);
+  display: flex;
+}
+
+.question {
+  height: 100px;
+  width: 700px;
+  display: flex;
+  align-content: center;
+  text-align: end;
+  justify-content: center;
+  background-color: rgb(233, 194, 122);
+  margin-left: calc(100% - 350px);
+  margin-top: 20px;
+  border: solid gray 1px;
+  border-radius: 100px;
+}
+
+.choices {
+  height: 60px;
+  width: 500px;
+  background-color: white;
+  border: solid purple 1px;
+  border-radius: 100px;
+  margin: 10px 0 0 66%;
+
+}
