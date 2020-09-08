@@ -54,6 +54,7 @@ function App() {
   // let triviaList = triviaTemp.results;
 
   const [loadClient, setLoadClient] = useState(true);
+  const [isReady, setIsReady] = useState(false);
 
   return (
     <Router>
@@ -65,8 +66,8 @@ function App() {
               STOP CLIENT
             </button>
             {/* SOCKET IO CLIENT*/}
-          {loadClient ? <ClientSocket /> : null}
-          <Content triviaList={triviaList} />
+          {loadClient ? <ClientSocket isReady={isReady} setIsReady={setIsReady} /> : null}
+          <Content triviaList={triviaList} isReady={isReady} setIsReady={setIsReady}  />
         </main>
       </div>
     </Router>

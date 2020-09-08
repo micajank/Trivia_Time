@@ -9,8 +9,9 @@ const ENDPOINT = 'http://127.0.0.1:4001';
 function ClientSocket(props) {
 
   const [response, setResponse] = useState("");
-  let rounds = 
+  
   useEffect(() => {
+   
     let mounted = true;
     const socket = socketIOClient(ENDPOINT);
 
@@ -20,16 +21,15 @@ function ClientSocket(props) {
             setResponse(data);
         }
         socket.on("counter", data => {
+            props.setIsReady(true);
+            
             console.log("This is data: " + data)
             if (mounted) {
             setResponse(data);
             }
+            // props.setIsReady(false);
         })
     })
-    // return () => mounted = false;
-   
-    
-
     return () => mounted = false;
   }, []);
  

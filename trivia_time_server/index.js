@@ -26,17 +26,18 @@ io.on('connection', (socket) => {
         if (interval) {
             clearInterval(interval);
         }
-        if (startGame) {
-            socket.emit('preQuestion', "Get ready for the next question.");
+        if(startGame) {
+            // while there are still questions and clients left, do this:
+            io.sockets.emit('preQuestion', "Get ready for the next question.");
             console.log("prequestion")
             var preQuestion = setTimeout(function() {
                 var counter = 10;
                 var WinnerCountdown = setInterval(function(){
                 console.log(counter) 
-                socket.emit('counter', counter);
+                io.sockets.emit('counter', counter);
                 counter--;
                 if (counter === 0) {
-                socket.emit('counter', "Time is up!!");
+                io.sockets.emit('counter', "Time is up!!");
                 console.log("Time's up!!!")
                 clearInterval(WinnerCountdown);
                 }

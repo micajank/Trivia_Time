@@ -10,7 +10,7 @@ export default function Content(props) {
     return (
         <Switch>
             <Route exact path='/' component={Landing} />
-            <Route path='/gameboard' render={() => <Gameboard triviaList={props.triviaList} />} />
+            <Route path='/gameboard' render={() => <Gameboard triviaList={props.triviaList} isReady={props.isReady} setIsReady={props.setIsReady}  />} />
         </Switch>
     )
 
