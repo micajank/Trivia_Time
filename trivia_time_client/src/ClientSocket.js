@@ -13,9 +13,10 @@ function ClientSocket() {
   useEffect(() => {
       let mounted = true;
     const socket = socketIOClient(ENDPOINT);
-    socket.on("FromAPI", data => {
+    socket.on("counter", data => {
+        console.log("This is data: " + data)
         if (mounted) {
-            setResponse(data);
+           setResponse(data);
         }
     })
     return () => mounted = false;
@@ -24,7 +25,7 @@ function ClientSocket() {
 
   return (
     <Router>
-      <p>It's <time dateTime={response}>{response}</time></p>
+      <p>{response}</p>
           
     </Router>
   );
